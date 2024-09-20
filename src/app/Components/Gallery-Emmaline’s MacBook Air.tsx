@@ -1,5 +1,5 @@
 "use client";
-import React, {FC, useState} from 'react';
+import React, {useState} from 'react';
 import bigApple from "../../../public/pictures/bigApple.jpeg"
 
 interface GalleryProps {
@@ -7,12 +7,13 @@ interface GalleryProps {
     images: Array<string>;
 };
 
-const Gallery: FC<GalleryProps> = (props) => {
+const Gallery = (props: GalleryProps) => {
     const [galleryCounter, setGalleryCounter] = useState(0)
 
     return (
         <>
             <div className='heading'>
+                <img src={String(bigApple)} alt="BIG" />
                 <h1>Welcome to the Gallery!</h1>
                 <h3>Feel free to peruse the hightly sought after art pieces</h3>
             </div>
